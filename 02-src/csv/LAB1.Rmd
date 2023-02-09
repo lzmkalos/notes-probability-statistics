@@ -1,0 +1,79 @@
+---
+title: "LAB1"
+author: "Kalos Lazo"
+date: "2023-02-08"
+output: pdf_document
+---
+
+## R para archivos de datos
+Para limpiar el ambiente usamos `rm(list=ls())`
+
+## Carga de los datos
+Para cargar una libreria:
+```{r}
+library(readr)
+```
+Sólo usamos la librería `readr` nos permite leer los archivos de datos. Debemos evitar usar la librería `read.csv` (errores comúnes con tildes).
+
+## Lectura de archivos
+1. Para leer un archivo de datos cn extensión `.csv`:
+```{r}
+DF <- read_csv("DatosDiversos.csv")
+```
+
+2. Consultar cuáles son las variables:
+```{r}
+names(DF)
+```
+3. Instalar librería para corregir nombres variables:
+```{r}
+library(dplyr)
+```
+
+4. Renombrar las variables con tildes a nombres compuestos y guardar en la variable nueva DFN:
+```{r}
+DF %>% rename(Periodo = Período, Codigo = Código) -> DFN
+```
+
+5. Para ver cuántas filas (número de observaciones) tiene el dataframe usamos:
+```{r}
+nrow(DFN) # 2038 Filas
+```
+
+6. Para ver cuántas columnas (número de variables):
+```{r}
+ncol(DFN) # 21
+```
+
+7. Acceder a una posición del DataFrame:
+```{r}
+DFN[3, 4] # Fila 3, columna 4
+```
+
+## Limpieza de datos
+1. Para que R nos de un resumen del DataFrame, usamos la función:
+```{r}
+summary(DFN)
+```
+
+2. Cantidad de datos faltantes:
+```{r}
+sum(is.na(DFN)) # 17350
+```
+
+3. Tabla de datos faltantes:
+```{r}
+table(is.na(DFN)) # 17350
+```
+
+4. Registros/datos completos:
+```{r}
+sum(complete.cases(DFN)) # 209
+```
+5. Casos no completos:
+```{r}
+sum(!complete.cases(DFN)) # 1829
+```
+
+
+

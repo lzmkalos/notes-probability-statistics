@@ -1,0 +1,105 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@700&display=swap');
+
+.markdown-preview.markdown-preview {
+  font-family: "Crimson Pro";
+  font-size: 1.2em !important;
+
+  .katex {
+    font-size: 1.1 em;
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Signika Negative" !important;
+    color: #000;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #000;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    margin-top: 30px;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  .header {
+    width: 100%;
+    text-align: left;
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+
+  .header_dec {
+    font-size: 1.1em;
+    font-weight: normal;
+  }
+  
+  .header_txt {
+    font-family: "Signika Negative" !important;
+    font-weight: bold;
+    font-size: 2em;
+  }
+
+  background-color: #FFF;
+  color: #2A2A2A;
+  text-align: justify;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px 10px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+  }
+
+  #n-box, #e-box {
+    display: block;
+    width: 100% !important;
+    background-color: #c7e6c99c;
+    border-left: 4px solid #579981;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+  }
+
+  #e-box {
+    background-color: #78a2cc60;
+    border-left: 4px solid #78A2CC;
+  }
+  
+  .admonition {
+    box-shadow: none !important;
+    border-left: 0.4rem solid #203354 !important;
+    border-color: #203354 !important;
+    background-color: rgba(32, 51, 84, 0.05) !important;
+  }
+  .admonition>.admonition-title:before {
+    color: #203354 !important;
+  }
+  .admonition-title {
+    font-weight: 400 !important;
+  }
+
+  pre {
+    font-family: "CaskaydiaCove Nerd Font";
+  }
+
+  &.prince {
+    @page {
+      size: A4;
+      margin: 5 !important;
+    }
+  }
+}
